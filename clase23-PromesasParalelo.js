@@ -18,7 +18,16 @@ function onError(id){
     console.log(`Sucedio un error al obtener el personaje con id ${id}`)
 }
 
-ObtenerPersonaje(1).then(function(personaje){
+var ids = [1, 2, 3, 4, 5]
+/* var promesas = ids.map(function(id){
+    return ObtenerPersonaje(id)
+}) */
+
+var promesas = ids.map(id => ObtenerPersonaje(id))
+
+Promise.all(promesas).then(personajes => console.log(personajes)).catch(onError)
+
+/* ObtenerPersonaje(1).then(function(personaje){
     console.log(`Hola, soy ${personaje.name}`)
     return ObtenerPersonaje(2)
 }).then(function(personaje){
@@ -36,7 +45,7 @@ ObtenerPersonaje(1).then(function(personaje){
 }).then(function(personaje){
     console.log(`Hola, soy ${personaje.name}`)
 })
-.catch(onError)
+.catch(onError) */
 
 
 
