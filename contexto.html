@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contexto</title>
+</head>
+<body>
+    <script>
+        const juan = {
+            nombre: 'Juan',
+            apellido: 'Garcia',
+            edad: 19
+        }
+        
+        const laura = {
+            nombre: 'Laura',
+            apellido: 'Garcia',
+            edad: 13
+        }
+
+        function saludar(saludo = 'hola'){
+            console.log(`${saludo}, mi nombre es ${this.nombre}`)
+        }
+
+        const SaludarJuan = saludar.bind(juan)
+        const SaludarLaura = saludar.bind(laura)
+
+        //setTimeout(saludar.bind(juan, 'hola como estas?'), 1000)
+
+        saludar.bind(juan, 'hola')
+        saludar.call(juan, 'hola')
+        saludar.apply(juan, ['hola'])
+
+    </script>
+</body>
+</html>

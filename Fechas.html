@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fechas</title>
+</head>
+<body>
+    <script>
+        function DiasEntreFechas(fecha1, fecha2){
+            const unDia = 1000 * 60 * 60 * 24
+            const diferencia = Math.abs(fecha1 - fecha2) 
+
+            return Math.floor(diferencia / unDia)
+        }
+
+        const Hoy = new Date()
+        const Nacimiento = new Date(2000, 4, 29)
+
+    </script>
+</body>
+</html>

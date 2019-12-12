@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estructuras</title>
+</head>
+<body>
+    <script>
+        var juan = {
+            nombre: 'Juan',
+            apellido: 'Garcia',
+            edad: 19
+        }
+
+        const cumpleAños = persona => persona.edad++
+        const cumpleAñosInmutable = persona => ({
+            ...persona,
+            edad: persona.edad + 1
+        })
+    </script>
+</body>
+</html>

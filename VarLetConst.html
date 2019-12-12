@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Var Let Const</title>
+</head>
+<body>
+    <script>
+        var juan = {
+            nombre: 'Juan',
+            apellido: 'Garcia',
+            edad: 19
+        }
+
+        function EsMayorDeEdad(persona){
+            
+            let mensaje
+            const MAYORIA_EDAD = 18
+            
+            if(persona.edad >= MAYORIA_EDAD){
+                mensaje = 'Es mayor de edad'
+            }else{
+                mensaje = 'Es menor de edad'
+            }
+            console.log(mensaje)
+        }
+
+        EsMayorDeEdad(juan)
+    </script>
+</body>
+</html>
